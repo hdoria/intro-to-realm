@@ -10,7 +10,7 @@ import Realm
 
 class Artist: RLMObject {
     dynamic var name = ""
-    dynamic var contry = ""
+    dynamic var country = ""
     
     override class func primaryKey() -> String! {
         return "name"
