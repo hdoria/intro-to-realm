@@ -16,6 +16,7 @@
 		5783DAC21A447A8E005574AA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783DABD1A447A4B005574AA /* libc++.dylib */; };
 		5783DAC41A447A9E005574AA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783DAC31A447A9E005574AA /* Realm.framework */; };
 		5783DAC61A447B1C005574AA /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783DAC51A447B1C005574AA /* RLMSupport.swift */; };
+		5783DAC91A447B79005574AA /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783DAC81A447B79005574AA /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5783DABD1A447A4B005574AA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		5783DAC31A447A9E005574AA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		5783DAC51A447B1C005574AA /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		5783DAC81A447B79005574AA /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Models/Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		5783DA9A1A4479FF005574AA /* Introduction to Realm */ = {
 			isa = PBXGroup;
 			children = (
+				5783DAC71A447B51005574AA /* Models */,
 				5783DAC51A447B1C005574AA /* RLMSupport.swift */,
 				5783DA9D1A4479FF005574AA /* AppDelegate.swift */,
 				5783DA9F1A4479FF005574AA /* ViewController.swift */,
@@ -129,6 +132,14 @@
 				5783DABD1A447A4B005574AA /* libc++.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5783DAC71A447B51005574AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5783DAC81A447B79005574AA /* Artist.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 			files = (
 				5783DAA01A4479FF005574AA /* ViewController.swift in Sources */,
 				5783DAC61A447B1C005574AA /* RLMSupport.swift in Sources */,
+				5783DAC91A447B79005574AA /* Artist.swift in Sources */,
 				5783DA9E1A4479FF005574AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
