@@ -13,6 +13,9 @@
 		5783DAA51A4479FF005574AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5783DAA41A4479FF005574AA /* Images.xcassets */; };
 		5783DAA81A4479FF005574AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5783DAA61A4479FF005574AA /* LaunchScreen.xib */; };
 		5783DAB41A4479FF005574AA /* Introduction_to_RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783DAB31A4479FF005574AA /* Introduction_to_RealmTests.swift */; };
+		5783DAC21A447A8E005574AA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783DABD1A447A4B005574AA /* libc++.dylib */; };
+		5783DAC41A447A9E005574AA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5783DAC31A447A9E005574AA /* Realm.framework */; };
+		5783DAC61A447B1C005574AA /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5783DAC51A447B1C005574AA /* RLMSupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		5783DAAD1A4479FF005574AA /* Introduction to RealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Introduction to RealmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5783DAB21A4479FF005574AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5783DAB31A4479FF005574AA /* Introduction_to_RealmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction_to_RealmTests.swift; sourceTree = "<group>"; };
+		5783DABD1A447A4B005574AA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		5783DAC31A447A9E005574AA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		5783DAC51A447B1C005574AA /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5783DAC41A447A9E005574AA /* Realm.framework in Frameworks */,
+				5783DAC21A447A8E005574AA /* libc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +70,7 @@
 				5783DA9A1A4479FF005574AA /* Introduction to Realm */,
 				5783DAB01A4479FF005574AA /* Introduction to RealmTests */,
 				5783DA991A4479FF005574AA /* Products */,
+				5783DAC11A447A78005574AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +86,7 @@
 		5783DA9A1A4479FF005574AA /* Introduction to Realm */ = {
 			isa = PBXGroup;
 			children = (
+				5783DAC51A447B1C005574AA /* RLMSupport.swift */,
 				5783DA9D1A4479FF005574AA /* AppDelegate.swift */,
 				5783DA9F1A4479FF005574AA /* ViewController.swift */,
 				5783DAA11A4479FF005574AA /* Main.storyboard */,
@@ -110,6 +120,15 @@
 				5783DAB21A4479FF005574AA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5783DAC11A447A78005574AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5783DAC31A447A9E005574AA /* Realm.framework */,
+				5783DABD1A447A4B005574AA /* libc++.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5783DAA01A4479FF005574AA /* ViewController.swift in Sources */,
+				5783DAC61A447B1C005574AA /* RLMSupport.swift in Sources */,
 				5783DA9E1A4479FF005574AA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +358,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/hdoria/Desktop/realm-cocoa-0.89.0/ios",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Introduction to Realm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +373,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/hdoria/Desktop/realm-cocoa-0.89.0/ios",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Introduction to Realm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
