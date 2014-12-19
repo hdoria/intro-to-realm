@@ -15,6 +15,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        /*
+            you probably will do this after fetch some requests from a webserver
+        */
+        
         println("Our default realm is located at \(RLMRealm.defaultRealmPath())")
         let realm = RLMRealm.defaultRealm()
         
@@ -34,10 +39,10 @@ class ViewController: UIViewController {
             Artist.createOrUpdateInDefaultRealmWithObject(ledZeppelin)
             
             // Also, we could do this
-            // realm.addObject(newArtist)
+            // realm.addObject(pinkFloyd)
             
             // Or this:
-            // realm.addObjects([newArtist, anotherArtist])
+            // realm.addObjects([pinkFloyd, ledZeppelin])
             
             let theDarkSideOfTheMoon = Album()
             theDarkSideOfTheMoon.name = "The Dark Side Of The Moon"
@@ -55,6 +60,20 @@ class ViewController: UIViewController {
             
             Album.createOrUpdateInDefaultRealmWithObject(theDarkSideOfTheMoon)
             Album.createOrUpdateInDefaultRealmWithObject(zepellinIV)
+        }
+        
+        // retrieving some albums
+        let albums = Album.allObjects()
+        for album in albums {
+            let anAlbum = album as Album
+            println("The album name is \(anAlbum.name) and the artist is \(anAlbum.artist!.name)")
+        }
+        
+        // retrieving only pink floyd albums
+        let pinkFloydAlbums = Album.objectsWhere("artist.name = 'Pink Floyd'", 0)
+        for pinkFLoydAlbum in pinkFloydAlbums {
+            let anPinkFloyAlbum = pinkFLoydAlbum as Album
+            println("The album \(anPinkFloyAlbum.name) is from the best artist ever and was released on \(anPinkFloyAlbum.year)")
         }
     }
 
